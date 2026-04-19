@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorting Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #00c6ff;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>⚡ Sorting Time Comparison</h2>
+
+        <form method="POST">
+            <input type="text" name="numbers" placeholder="Enter numbers (e.g. 5,3,8,1)" required>
+            <br>
+            <button type="submit">Compare</button>
+        </form>
+
+        {% if bubble %}
+        <div class="result">
+            <p>🫧 Bubble Sort Time: {{ bubble }}</p>
+            <p>🚀 Merge Sort Time: {{ merge }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
